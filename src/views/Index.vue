@@ -11,6 +11,19 @@
     name: "Index",
     components: {
       Loading
+    },
+    methods: {
+      /**
+       * Stock dans le store la config
+       *
+       * @param ip
+       */
+      initialisationConfig () {
+        this.$store.dispatch('Config/attribuerConfig')
+      }
+    },
+    mounted () {
+      this.initialisationConfig()
     }
   }
 </script>
