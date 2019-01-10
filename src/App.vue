@@ -2,7 +2,7 @@
   <div>
   
     <form novalidate class="md-layout" @submit.prevent="validateUser">
-      <md-card class="md-layout-item md-size-50 md-small-size-100">
+      <md-card class="md-layout-item md-size-50 md-small-size-100"  style="height: 100vh;">
 
         <img class="img" src="./assets/logoSmall.png">
         <md-card-header>
@@ -32,16 +32,15 @@
                 </md-select>
                 <span class="md-error">The gender is required</span>
               </md-field>
-            </div>
-
-            
+            </div>            
           </div>
+
         </md-card-content>
 
         <md-progress-bar md-mode="indeterminate" v-if="sending" />
 
-        <md-card-actions>
-          <md-button type="submit" class="md-primary" :disabled="sending">Ajouter votre Omicron</md-button>
+        <md-card-actions >
+          <md-button style="text-align:center;" type="submit" class="md-primary" :disabled="sending">Ajouter votre Omicron</md-button>
         </md-card-actions>
       </md-card>
 
@@ -119,6 +118,7 @@
 </script>
 
 <style lang="scss" scoped>
+  
   .img{
   display: block;
     margin-left: auto;
