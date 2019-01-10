@@ -1,0 +1,83 @@
+$sizeCard: 90px;
+
+.listing {
+  &__welcome {
+    background-color: #3259d9;
+    height: 20vh;
+    margin: 30px;
+    border-radius: 25px;
+    padding: 35px;
+    color: white;
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-weight: 200;
+      font-size: 15px;
+    }
+  }
+  &__card {
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 15px;
+    height: $sizeCard;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: 1s all ease-in-out;
+    &--expand {
+      z-index: 5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      transition: 1s all ease-in-out;
+    }
+    &-status {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      .on {
+        background-color: #7bbb5e;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+      }
+      .off {
+        background-color: #ff6565;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+      }
+    }
+    &-image {
+      height: $sizeCard;
+      width: 30%;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+    }
+    &-description {
+      width: 50%;
+      margin: 15px;
+      h2 {
+        font-weight: 200;
+        font-size: 20px;
+        opacity: 0.6;
+        margin: 0;
+      }
+      p {
+        font-weight: 200;
+        margin-top: 10px;
+        font-size: 12px;
+        opacity: 0.6;
+      }
+    }
+  }
+}
