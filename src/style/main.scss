@@ -1,3 +1,10 @@
+@import 'modules/Loading';
+
+@font-face{
+    font-family: 'Google-sans';
+    src: url('../assets/font/GoogleSans-Regular.ttf') format('ttf');
+}
+
 body {
-  background-color: yellow;
+    margin: 0px;
 }

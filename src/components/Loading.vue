@@ -1,6 +1,8 @@
 <template>
   <div class="loading">
-    <!--<img src="~/assets/img/logo.svg" alt="Chargement" class="loading__image"/>-->
+    <div>
+      <img src="../assets/img/logo_white.png" id="loading_img" alt="Chargement" class="loading__image"/>
+    </div>
   </div>
 </template>
 
