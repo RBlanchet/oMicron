@@ -102,9 +102,15 @@ const webpackConfig = merge(baseWebpackConfig, {
     new SWPrecacheWebpackPlugin({
       cacheId: 'cropchat',
       filename: 'service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,html,css,ttf}'],
+      staticFileGlobs: ['dist/**/*.{js,html,css,ttf,png,json}'],
       minify: true,
-      stripPrefix: 'dist/'
+      stripPrefix: 'dist/',
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/via\.placeholder\.com\//,
+          handler: 'cacheFirst'
+        },
+      ]
     })
   ]
 })

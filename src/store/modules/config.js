@@ -14,7 +14,7 @@ const actions = {
   attribuerConfig({ commit }) {
     return new Promise((resolve => {
       // Chargement du fichier de config
-      let config = require('../../config/config')
+      let config = require('../../../config/config')
 
       commit('SET_CONFIG', config)
       resolve(true)
