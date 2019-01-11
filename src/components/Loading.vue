@@ -1,11 +1,16 @@
 <template>
   <div class="loading">
-    <!--<img src="~/assets/img/logo.svg" alt="Chargement" class="loading__image"/>-->
+    <LoadingIcon class="loading__image"/>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "Loading"
+  import LoadingIcon from '../assets/img/logo.svg';
+
+  export default {
+    name: "Loading",
+    components: {
+      LoadingIcon
     }
+  }
 </script>
