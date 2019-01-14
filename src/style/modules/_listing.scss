@@ -4,10 +4,11 @@ $sizeCard: 90px;
   &__welcome {
     background-color: #3259d9;
     height: 20vh;
-    margin: 30px;
     border-radius: 25px;
     padding: 35px;
     color: white;
+    overflow: hidden;
+    margin: 20px;
     h1 {
       font-size: 30px;
     }
@@ -15,29 +16,31 @@ $sizeCard: 90px;
       font-weight: 200;
       font-size: 15px;
     }
+    &-hide {
+      height: 0 !important;
+      transition: 1s all ease-in-out;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+      h1 {
+        margin: 0;
+        font-size: 0;
+      }
+      p {
+        margin: 0;
+        font-size: 0;
+      }
+    }
   }
   &__card {
-    display: flex;
-    margin-left: 30px;
-    margin-right: 30px;
     margin-top: 15px;
     background-color: white;
     border-radius: 15px;
-    height: $sizeCard;
     align-items: center;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     transition: 1s all ease-in-out;
-    &--expand {
-      z-index: 5;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      transition: 1s all ease-in-out;
-    }
+    width: 100%;
     &-status {
-      width: 20%;
       display: flex;
       justify-content: center;
       .on {
@@ -54,17 +57,24 @@ $sizeCard: 90px;
       }
     }
     &-image {
-      height: $sizeCard;
-      width: 30%;
+      height: auto;
+      width: 25%;
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
+      margin: 0;
+      transition: 1s all ease-in-out;
+      &_expand {
+        border-bottom-left-radius: 0px;
+      }
     }
     &-content {
+      width: 95%;
+      margin: auto;
       display: flex;
       flex-direction: column;
     }
     &-description {
-      width: 50%;
+      width: 60%;
       margin: 15px;
       h2 {
         font-weight: 200;
@@ -77,6 +87,18 @@ $sizeCard: 90px;
         margin-top: 10px;
         font-size: 12px;
         opacity: 0.6;
+      }
+    }
+    &-header {
+      display: flex;
+      align-items: center;
+    }
+    &--joystick {
+      height: 0;
+      overflow: hidden;
+      &_expand {
+        height: 50vh;
+        transition: 1s all ease-in-out;
       }
     }
   }
