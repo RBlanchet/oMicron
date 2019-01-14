@@ -1,3 +1,16 @@
+
 body {
   background-color: #4582D4;
+  margin: 0;
+  padding: 0;
+  background-color: #425EE5;
+  font-family: Google-sans;
 }
+
+@font-face {
+  font-family: 'Google-sans';
+  src: url('../assets/font/GoogleSans-Regular.ttf');
+}
+
+
+@import "modules/listing";
