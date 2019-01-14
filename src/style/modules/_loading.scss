@@ -1,0 +1,38 @@
+
+.loading {
+  &__image {
+    height: 70px;
+    width: 70px;
+  }
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 5;
+  background-color: $backgroundColor;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Google-sans', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  p {
+    opacity: 0.6;
+  }
+}
+
+#loading_img{
+  animation-name: spin;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

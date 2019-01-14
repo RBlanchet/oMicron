@@ -14,10 +14,12 @@ Vue.use(Vuex)
 
 /** Modules du store **/
 import Config from "./modules/config"
+import Socket from './modules/socket'
 
 export default new Vuex.Store({
   // Importer les modules ICI
   modules: {
-    Config
+    Config,
+    Socket
   },
 })
