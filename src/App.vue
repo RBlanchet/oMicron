@@ -9,3 +9,8 @@
     name: 'App'
   }
 </script>
+
+
+<style lang="scss">
+  @import "/style/main";
+</style>

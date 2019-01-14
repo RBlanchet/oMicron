@@ -1,11 +1,28 @@
-body {
-  background-color : #425ee5;
+body {margin: 0; padding: 0; background-color: #425EE5; font-family: Google-sans; overflow: hidden}
+
+@font-face {
+  font-family: 'Google-sans';
+  src: url('./assets/font/GoogleSans-Regular.ttf');
 }
 
-html,body {
-  position: relative;
-  height: 100%;
+.fadeHeight-enter-active,
+.fadeHeight-leave-active {
+  transition: all 0.5s;
+  max-height: 20vh;
 }
+.fadeHeight-enter,
+.fadeHeight-leave-to
+{
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+  opacity: 0;
+  max-height: 0;
+}
+
+@import "modules/listing";
+
+@import "~vue2-animate/src/sass/vue2-animate.scss";
 
 .swiper-box {
   width: 100%;
@@ -56,7 +73,7 @@ img {
   border: 0;
   font-family: "Roboto", sans-serif;
   box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
-	transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .swiper-pagination-bullet-active {

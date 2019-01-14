@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/views/Index'
+
+/** Vue **/
+import Listing from '@/views/Listing'
 import Tuto from '@/views/Tuto'
 import Test from '@/views/test'
 
@@ -10,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: Index
+      name: 'Listing',
+      component: Listing
     },
     {
       path: '/tuto',
