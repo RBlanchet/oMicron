@@ -8,6 +8,11 @@ import App from './App'
 /** Routeur **/
 import router from './router'
 
+/** Vue Material **/
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+Vue.use(VueMaterial)
+
 /** Store **/
 import store from './store'
 

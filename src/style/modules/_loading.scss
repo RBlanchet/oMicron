@@ -1,13 +1,15 @@
 
 .loading {
   &__image {
-    height: 110px;
-    width: 110px;
+    height: 70px;
+    width: 70px;
   }
-  background-color: #3259d9;
   display: flex;
   width: 100vw;
   height: 100vh;
+  position: absolute;
+  z-index: 5;
+  background-color: $backgroundColor;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
