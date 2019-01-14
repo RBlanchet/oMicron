@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="zone_joystick" @click="getPosition" style="width:500px; height: 500px;"></div>
+        <div id="zone_joystick" @click="getPosition" style="width:200px; height: 200px;"></div>
     </div>
 </template>
 
@@ -14,7 +14,8 @@
             return {
                 options: {},
                 joystick: null,
-                position: {}
+                mode: 'static',
+                position: {top: '100px', left: '50%'}
             }
         },
         methods: {

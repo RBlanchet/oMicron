@@ -1,6 +1,18 @@
 $sizeCard: 90px;
 
 .listing {
+  &__close {
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    z-index: 5000;
+    button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 20px;
+    }
+  }
   &__welcome {
     background-color: #3259d9;
     height: 20vh;
@@ -9,6 +21,7 @@ $sizeCard: 90px;
     color: white;
     overflow: hidden;
     margin: 20px;
+    transition: 0.6s all ease-in-out;
     h1 {
       font-size: 30px;
     }
@@ -18,10 +31,9 @@ $sizeCard: 90px;
     }
     &-hide {
       height: 0 !important;
-      transition: 1s all ease-in-out;
+      transition: 0.6s all ease-in-out;
       margin-top: 0;
       margin-bottom: 0;
-      padding: 0;
       h1 {
         margin: 0;
         font-size: 0;
@@ -38,7 +50,7 @@ $sizeCard: 90px;
     border-radius: 15px;
     align-items: center;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    transition: 1s all ease-in-out;
+    transition: 0.6s all ease-in-out;
     width: 100%;
     &-status {
       display: flex;
@@ -57,12 +69,12 @@ $sizeCard: 90px;
       }
     }
     &-image {
-      height: auto;
+      height: 92px !important;
       width: 25%;
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
       margin: 0;
-      transition: 1s all ease-in-out;
+      transition: 0.6s all ease-in-out;
       &_expand {
         border-bottom-left-radius: 0px;
       }
@@ -96,9 +108,12 @@ $sizeCard: 90px;
     &--joystick {
       height: 0;
       overflow: hidden;
+      transition: 0.6s all ease-in-out;
       &_expand {
-        height: 50vh;
-        transition: 1s all ease-in-out;
+        position: relative;
+        height: 60vh;
+        margin-top: 50px;
+        transition: 0.6s all ease-in-out;
       }
     }
   }
