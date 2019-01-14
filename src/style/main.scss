@@ -1,16 +1,14 @@
 
-body {
-  background-color: #4582D4;
-  margin: 0;
-  padding: 0;
-  background-color: #425EE5;
-  font-family: Google-sans;
-}
+$backgroundColor: #425EE5;
+
+body {margin: 0; padding: 0; background-color: $backgroundColor; font-family: Google-sans; overflow: hidden}
 
 @font-face {
   font-family: 'Google-sans';
-  src: url('../assets/font/GoogleSans-Regular.ttf');
+  src: url('./assets/font/GoogleSans-Regular.ttf');
 }
 
-
+/** Modules Scss **/
 @import "modules/listing";
+@import "modules/personnalisation";
+

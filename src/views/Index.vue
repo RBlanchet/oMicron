@@ -54,7 +54,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  @import "../style/main";
-</style>
