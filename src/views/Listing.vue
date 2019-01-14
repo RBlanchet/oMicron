@@ -13,10 +13,10 @@
       <div class="listing__card-content" :class="{ 'fadeInLeft': listing }">
         <div class="listing__card">
           <div class="listing__card-header">
-            <img src="https://via.placeholder.com/150" alt="logo robot" class="listing__card-image" :class="{'listing__card-image_expand': cardExpand}" @click="selectRobot"/>
+            <div class="listing__card-image" :style="{ 'background-color': color }" :class="{'listing__card-image_expand': cardExpand}" @click="selectRobot"></div>
             <div class="listing__card-description">
-              <h2>Mon Robot On</h2>
-              <p>Lorem ipsum dolor sit amet</p>
+              <h2>{{ nom }}</h2>
+              <p>Cliquez pour commencer</p>
             </div>
             <div class="listing__card-status">
               <div class="on"></div>
@@ -24,9 +24,14 @@
           </div>
           <div class="listing__card--joystick" :class="{'listing__card--joystick_expand': cardExpand}">
             <transition name="fade">
-              <Joystick v-if="joystickExpand"/>
+              <Joystick v-if="joystickExpand" style="animation-duration: 0.5s"/>
             </transition>
           </div>
+          <transition name="fadeDown">
+            <button class="listing__card--button" @click="personnaliser" v-if="joystickExpand">
+              PERSONNALISER
+            </button>
+          </transition>
         </div>
       </div>
     </div>
@@ -52,7 +57,9 @@
         loading: true,
         listing: false,
         listingWelcomeFade: true,
-        close: false
+        close: false,
+        nom: localStorage.nom ? localStorage.nom : "Mon robot",
+        color: localStorage.color ? localStorage.color : "#333",
       }
     },
     components: {
@@ -96,6 +103,9 @@
             }, 500)
           }, 600)
         }, 600)
+      },
+      personnaliser () {
+        this.$router.push('/personnalisation')
       }
     },
     mounted () {
