@@ -80,8 +80,7 @@ $sizeCard: 90px;
       }
     }
     &-content {
-      width: 95%;
-      margin: auto;
+      margin: 20px;
       display: flex;
       flex-direction: column;
     }
@@ -111,10 +110,22 @@ $sizeCard: 90px;
       transition: 0.6s all ease-in-out;
       &_expand {
         position: relative;
-        height: 60vh;
+        height: 50vh;
         margin-top: 50px;
         transition: 0.6s all ease-in-out;
       }
+    }
+    &--button {
+      background-color: $backgroundColor;
+      display: block;
+      margin: auto;
+      width: 150px;
+      height: 45px;
+      border-radius: 25px;
+      border: none;
+      color: white;
+      font-size: 12px;
+      margin-bottom: 15px;
     }
   }
 }
