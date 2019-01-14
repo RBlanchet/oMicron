@@ -1,9 +1,25 @@
-body {margin: 0; padding: 0; background-color: #425EE5; font-family: Google-sans;}
+body {margin: 0; padding: 0; background-color: #425EE5; font-family: Google-sans; overflow: hidden}
 
 @font-face {
   font-family: 'Google-sans';
-  src: url('../assets/font/GoogleSans-Regular.ttf');
+  src: url('./assets/font/GoogleSans-Regular.ttf');
 }
 
+.fadeHeight-enter-active,
+.fadeHeight-leave-active {
+  transition: all 0.5s;
+  max-height: 20vh;
+}
+.fadeHeight-enter,
+.fadeHeight-leave-to
+{
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s;
+  opacity: 0;
+  max-height: 0;
+}
 
 @import "modules/listing";
+
+@import "~vue2-animate/src/sass/vue2-animate.scss";

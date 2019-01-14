@@ -2,7 +2,7 @@
 const express = require('express')
 const path    = require("path")
 const fs      = require('fs')
-const port    = 5000
+const port    = 8080
 const app     = express()
 
 // Import du fichier de config
@@ -15,7 +15,7 @@ const ip      = require('ip')
 const server = app.listen(port, () => {
   let ipAddress = ip.address()
 
-  if (ipAddress !== config.IP_ADDRESS) {
+  if (ipAddress != config.IP_ADDRESS) {
     config.IP_ADDRESS = ipAddress
     fs.writeFileSync(__dirname + '/../config/config.json', JSON.stringify(config))
   }
@@ -65,8 +65,12 @@ app.get('/', (req, res) => {
 io.on('connection', function(socket){
   console.log('Un utilisateur est connecté.')
   // Reinitialisation du Servo Moteur
-  let positionInitiale = _positionInitiale
+  if (config.ENVIRONNEMENT == "production") {
+    let positionInitiale = _positionInitiale
+  }
+
   // GPIO
+
   /**
    * Fonction avancer
    */
@@ -79,6 +83,7 @@ io.on('connection', function(socket){
     }
 
   })
+
   /**
    * Fonction stop avancer
    */
@@ -91,6 +96,7 @@ io.on('connection', function(socket){
     }
 
   })
+
   /**
    * Fonction reculer
    */
@@ -102,6 +108,7 @@ io.on('connection', function(socket){
       console.log('Reculer')
     }
   })
+
   /**
    * Fonction stop reculer
    */
@@ -113,6 +120,7 @@ io.on('connection', function(socket){
       console.log('Stop Reculer')
     }
   })
+
   /**
    * Fonction droite
    */
@@ -129,6 +137,7 @@ io.on('connection', function(socket){
       console.log('Droite')
     }
   })
+
   /**
    * Fonction stop droite
    */
@@ -140,6 +149,7 @@ io.on('connection', function(socket){
       console.log('Stop Droite')
     }
   })
+
   /**
    * Fonction gauche
    */
@@ -156,6 +166,7 @@ io.on('connection', function(socket){
       console.log('Gauche')
     }
   })
+
   /**
    * Fonction stop gauche
    */
@@ -167,6 +178,7 @@ io.on('connection', function(socket){
       console.log('Stop Gauche')
     }
   })
+
   /**
    * Fonction Arrêt
    */
