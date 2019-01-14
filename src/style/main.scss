@@ -1,5 +1,5 @@
 body {
-  background-color : #fafbfc;
+  background-color : #425ee5;
 }
 
 html,body {
@@ -9,21 +9,26 @@ html,body {
 
 .swiper-box {
   width: 100%;
-  height: 100%;
-  //margin: 0 auto;
-  margin-top: 50%;
+  height: 100vh;
+  margin-bottom: 15vh;
+}
+
+#img-tools {
+  margin-top: 16.5vh;
 }
 
 .swiper-item {
   height: 100%;
   text-align: center;
-  font-size: 18px ;
-  background: #fff;
+  font-size: 16px ;
+  background: #425ee5;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -32,9 +37,28 @@ html,body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  color: #fff;
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  max-width: 25%;
+  max-height: 25%;
+  margin-bottom: 5vh;
+}
+
+.btn-slider {
+  margin-top: 10vh;
+  color: black;
+  background: white;
+  border-radius: 50px;
+  padding: 15px 35px;
+  font-size: 1rem;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+	transition: all 200ms ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
 }
