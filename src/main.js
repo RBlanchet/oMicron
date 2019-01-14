@@ -8,6 +8,9 @@ import App from './App'
 /** Routeur **/
 import router from './router'
 
+/** Icones **/
+import "vue-material-design-icons/styles.css"
+
 /** Vue Material **/
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'

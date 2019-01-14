@@ -8,10 +8,10 @@ body {margin: 0; padding: 0; background-color: $backgroundColor; font-family: Go
   src: url('./assets/font/GoogleSans-Regular.ttf');
 }
 
-
 /** Modules Scss **/
 @import "modules/loading";
 @import "modules/listing";
+@import "modules/personnalisation";
 @import "modules/tuto";
 
 /** Animate **/
