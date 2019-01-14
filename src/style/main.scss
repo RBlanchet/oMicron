@@ -1,10 +1,10 @@
-@import 'modules/Loading';
+body {margin: 0; padding: 0; background-color: #425EE5; font-family: Google-sans;}
 
-@font-face{
-    font-family: 'Google-sans';
-    src: url('../assets/font/GoogleSans-Regular.ttf') format('ttf');
+@font-face {
+  font-family: 'Google-sans';
+  src: url('../assets/font/GoogleSans-Regular.ttf');
 }
 
-body {
-    margin: 0px;
-}
+@import "modules/Loading";
+
+@import "modules/listing";

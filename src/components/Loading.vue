@@ -7,7 +7,12 @@
 </template>
 
 <script>
-    export default {
-        name: "Loading"
+  import LoadingIcon from '../assets/img/logo.svg';
+
+  export default {
+    name: "Loading",
+    components: {
+      LoadingIcon
     }
+  }
 </script>
