@@ -11,7 +11,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+//const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const loadMinified = require('./load-minified')
 
 const env = config.build.env
@@ -99,19 +99,19 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
     // service worker caching
-    new SWPrecacheWebpackPlugin({
-      cacheId: 'cropchat',
-      filename: 'service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,html,css,ttf,png,json}'],
-      minify: true,
-      stripPrefix: 'dist/',
-      runtimeCaching: [
-        {
-          urlPattern: /^https:\/\/via\.placeholder\.com\//,
-          handler: 'cacheFirst'
-        },
-      ]
-    })
+    //new SWPrecacheWebpackPlugin({
+    //  cacheId: 'cropchat',
+    //  filename: 'service-worker.js',
+    //  staticFileGlobs: ['dist/**/*.{js,html,css,ttf,png,json}'],
+    //  minify: true,
+    //  stripPrefix: 'dist/',
+    //  runtimeCaching: [
+    //    {
+    //      urlPattern: /^https:\/\/via\.placeholder\.com\//,
+    //      handler: 'cacheFirst'
+    //    },
+    //  ]
+    //})
   ]
 })
 
