@@ -64,22 +64,40 @@
                     console.log(nouvelleValeur.y)
                     if (nouvelleValeur.y === 'down') {
                         this.socket.emit('STOP_AVANCER')
+			console.log('Reculer')
                         this.socket.emit('RECULER')
+
+                        if (nouvelleValeur.angle === 'down') {
+                            this.socket.emit('STOP_DROITE')
+                            this.socket.emit('STOP_GAUCHE')
+                        }
+                        if (nouvelleValeur.angle === 'left') {
+                            this.socket.emit('STOP_DROITE')
+                            this.socket.emit('GAUCHE')
+                        }
+                        if (nouvelleValeur.angle === 'right') {
+                            this.socket.emit('STOP_GAUCHE')
+                            this.socket.emit('DROITE')
+                        }
                     }
                     if (nouvelleValeur.y === 'up')  {
                         this.socket.emit('STOP_RECULER')
                         this.socket.emit('AVANCER')
+			console.log('Avancer')
+                        if (nouvelleValeur.angle === 'up') {
+                            this.socket.emit('STOP_DROITE')
+                            this.socket.emit('STOP_GAUCHE')
+                        }
+                        if (nouvelleValeur.angle === 'left') {
+                            this.socket.emit('STOP_DROITE')
+                            this.socket.emit('GAUCHE')
+                        }
+                        if (nouvelleValeur.angle === 'right') {
+                            this.socket.emit('STOP_GAUCHE')
+                            this.socket.emit('DROITE')
+                        }
                     }
 
-                    if (nouvelleValeur.x === 'left') {
-                        this.socket.emit('STOP_DROITE')
-                        this.socket.emit('GAUCHE')
-                    }
-
-                    if (nouvelleValeur.x === 'right') {
-                        this.socket.emit('STOP_GAUCHE')
-                        this.socket.emit('DROITE')
-                    }
                 } else {
                     this.socket.emit('ARRET')
                 }
